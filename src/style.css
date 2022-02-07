@@ -1,0 +1,593 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"), url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Thin"), local("Roboto-Thin"), url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+input::-ms-clear {
+  display: none;
+}
+
+html.ie9 * {
+  border-radius: 0 !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.42;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #202020;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media screen and (max-width: 767.98px) {
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+
+.content ul {
+  margin: 1em 0;
+  padding-left: 40px;
+}
+.content ul li {
+  list-style: disc;
+}
+.content h1 {
+  font-size: 40px;
+}
+.content h2 {
+  font-size: 32px;
+}
+.content h3 {
+  font-size: 28px;
+}
+.content h4 {
+  font-size: 24px;
+}
+.content h5 {
+  font-size: 20px;
+}
+.content h6 {
+  font-size: 16px;
+}
+.content p {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input, textarea {
+  border: none;
+  background: none;
+  outline: none;
+  font: inherit;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ffffff;
+  width: 333px;
+  max-width: 100%;
+  height: 58px;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ffffff;
+  color: #202020;
+}
+@media screen and (max-width: 1279.98px) {
+  .btn:hover {
+    background: transparent;
+    color: #ffffff;
+  }
+}
+.btn:hover svg {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+@media screen and (max-width: 1279.98px) {
+  .btn:hover svg {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+.btn--black {
+  color: #202020;
+  border-color: #202020;
+}
+.btn--black:hover {
+  background: #202020;
+  color: #ffffff;
+}
+@media screen and (max-width: 1279.98px) {
+  .btn--black:hover {
+    color: #202020;
+    background: transparent;
+  }
+}
+.btn--gold {
+  border-color: #bfa058;
+  color: #202020;
+}
+.btn--gold:hover {
+  background: #202020;
+  border-color: #202020;
+  color: #ffffff;
+}
+.btn--revers svg {
+  margin-right: 15px;
+  margin-left: 0 !important;
+}
+.btn--revers:hover svg {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+.btn--hover-black:hover {
+  border-color: #202020;
+  background-color: #202020;
+  color: #ffffff;
+}
+.btn svg {
+  fill: currentColor;
+  margin-left: 15px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.btn2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  width: 333px;
+  max-width: 100%;
+  height: 58px;
+  color: #202020;
+  font-family: Roboto;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn2:hover {
+  background: transparent;
+  color: #202020;
+}
+.btn2:hover svg {
+  fill: #202020;
+}
+.btn2 svg {
+  fill: #202020;
+  margin-left: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn2--black {
+  background: #202020;
+  color: #ffffff;
+  border-color: #202020;
+}
+.btn2--black svg {
+  fill: #ffffff;
+}
+.btn2--black:hover {
+  background: transparent;
+  color: #202020;
+}
+.btn2--black:hover svg {
+  fill: #202020;
+}
+
+.title {
+  color: #202020;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767.98px) {
+  .title {
+    font-size: 20px;
+  }
+}
+.title--line {
+  padding-top: 30px;
+  position: relative;
+}
+@media screen and (max-width: 767.98px) {
+  .title--line {
+    padding-top: 20px;
+  }
+}
+.title--line:before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 8px;
+  background-color: #bfa058;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 767.98px) {
+  .title--line:before {
+    height: 4px;
+  }
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+.mb40 {
+  margin-bottom: 40px !important;
+}
+.mb60 {
+  margin-bottom: 60px;
+}
+.mb80 {
+  margin-bottom: 80px !important;
+}
+@media screen and (max-width: 1919.98px) {
+  .mb80 {
+    margin-bottom: 50px !important;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .mb80 {
+    margin-bottom: 30px !important;
+  }
+}
+.mb120 {
+  margin-bottom: 120px !important;
+}
+@media screen and (max-width: 1919.98px) {
+  .mb120 {
+    margin-bottom: 80px !important;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .mb120 {
+    margin-bottom: 30px !important;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 74px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #202020;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  resize: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1279.98px) {
+  .input {
+    height: 60px;
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .input {
+    font-size: 16px;
+    height: 51px;
+  }
+}
+.input--area {
+  height: 123px;
+  padding-top: 20px;
+}
+.input:focus {
+  border-color: #e7511c;
+}
+.input.error {
+  border-color: red;
+}
+.input.error::-webkit-input-placeholder {
+  color: red;
+}
+.input.error::-moz-placeholder {
+  color: red;
+}
+.input.error:-ms-input-placeholder {
+  color: red;
+}
+.input.error::-ms-input-placeholder {
+  color: red;
+}
+.input.error::placeholder {
+  color: red;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.debug {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  display: none;
+}
+.debug > div {
+  height: inherit;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .debug > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .debug > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .debug > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .debug > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .debug > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.debug > div > div {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media screen and (max-width: 767.98px) {
+  .debug > div > div {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .debug > div > div {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+.debug > div > div > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(4.1666666667% - 20px);
+  height: inherit;
+  outline: 1px solid red;
+  background: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 767.98px) {
+  .debug > div > div > div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .debug > div > div > div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .debug > div > div > div {
+    width: calc(4.1666666667% - 10px);
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .debug > div > div > div {
+    width: calc(4.1666666667% - 10px);
+  }
+}
