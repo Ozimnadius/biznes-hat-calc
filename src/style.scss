@@ -11,14 +11,6 @@
 @import "css/footer";
 
 //COMPONENTS
+@import "css/components/calc";
 
 //PAGES
-
-
-
-.debug {
-  @include debug(rgba(0,0,0,0.3), 1px solid red);
-  z-index: 100;
-  top: 0;
-  display: none;
-}

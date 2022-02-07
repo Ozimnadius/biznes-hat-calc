@@ -1,72 +1,186 @@
 <!DOCTYPE html>
-<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Portfolio | Главная</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="/css/libs.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Для изменений после верстки-->
-    <link rel="stylesheet" href="/css/custom.css">
-
-    <script defer src="/js/libs.js"></script>
-    <script defer src="/js/script.js"></script>
-    <!-- Для изменений после верстки-->
-    <script defer src="/js/custom.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Portfolio | &Gcy;&lcy;&acy;&vcy;&ncy;&acy;&yacy;</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/css/libs.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Для изменений после верстки-->
+  <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
-<div class="wrapper">
-    <div class="wrapper__header">
-        <header class="header"></header>
-    </div>
-    <div class="wrapper__content">
-        <main class="page">
-            <div class="container">
-                <h1>Lorem Header</h1>
-            </div>
-        </main>
-    </div>
-    <div class="wrapper__footer">
-        <footer class="footer"></footer>
-    </div>
-</div>
-<div class="debug">
-    <div>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+  <div class="wrapper">
+    <form class="calc" action="#" method="post" data-calc="calc">
+      <div class="container calc__container">
+        <h2 class="calc__title">Калькулятор на сайт СПК</h2>
+        <div class="calc__tables">
+          <table class="calc__table table">
+            <thead>
+              <th>Параметры здания</th>
+              <th>Ед.изм</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ширина здания</td>
+                <td>
+                  <input class="table__input" type="number" data-calc="field" data-square="item" name="width" value="25">
+                </td>
+              </tr>
+              <tr>
+                <td>Длина здания</td>
+                <td>
+                  <input class="table__input" type="number" data-calc="field" data-square="item" name="length" value="40">
+                </td>
+              </tr>
+              <tr>
+                <td>Кол-во этажей</td>
+                <td>
+                  <select class="table__select" name="floors" data-calc="field" data-square="item">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td> Высота потолка</td>
+                <td>
+                  <select class="table__select" name="ceilingHeight" data-calc="field" data-ceilingHeight>
+                    <option value="2.5">2.5</option>
+                    <option value="3">3</option>
+                    <option value="3.5" selected>3.5</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Площадь</td>
+                <td>
+                  <input class="table__input" type="number" name="square" data-square="total" readonly>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="calc__table table">
+            <thead>
+              <tr>
+                <th>Наименование</th>
+                <th>Переменная</th>
+                <th>Цена руб/м²</th>
+                <th>Сумма руб с НДС - 20%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Тип конструкции</td>
+                <td>
+                  <input class="table__input" type="text" data-type="name" name="type['name']" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" data-type="price" name="type['price']" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" data-type="total" name="type['total']" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td>Электрика, светильники, автомат</td>
+                <td>
+                  <select class="table__select" name="electric['value']" data-calc="field" data-electric="select">
+                    <option value="1450" selected>Да</option>
+                    <option value="0">Нет</option>
+                  </select>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="electric['price']" data-electric="price" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="electric['total']" data-electric="total" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td>Водоснабжение и водоотведение (кол-во точек подключения)</td>
+                <td>
+                  <input class="table__input" type="number" name="water['value']" data-calc="field" data-water="value" value="10">
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="water['price']" data-water="price" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="water['total']" data-water="total" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td>Отопление</td>
+                <td>
+                  <select class="table__select" name="heating['value']" data-calc="field" data-heating="select">
+                    <option value="1350" selected>Водяное отопление</option>
+                    <option value="450">Отопление электрическими конвекторами</option>
+                    <option value="0">Без отопления</option>
+                  </select>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="heating['price']" data-heating="price" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="heating['total']" data-heating="total" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td>Монтаж здания (Москва и МО)</td>
+                <td>
+                  <select class="table__select" name="building['value']" data-calc="field" data-building="select">
+                    <option value="15000" selected>Да</option>
+                    <option value="0">Нет</option>
+                  </select>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="building['price']" data-building="price" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="building['total']" data-building="total" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td>Доставка комплекта здания (Москва и МО)</td>
+                <td>
+                  <select class="table__select" name="delivery['value']" data-calc="field" data-delivery="select">
+                    <option value="1600" selected>Да</option>
+                    <option value="0">Нет</option>
+                  </select>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="delivery['price']" data-delivery="price" readonly>
+                </td>
+                <td>
+                  <input class="table__input" type="number" name="delivery['total']" data-delivery="total" readonly>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Итого базовая стоимость комплекта здания</th>
+                <th>
+                  <input class="table__input" type="number" name="total['price']" data-total="price" readonly>
+                </th>
+                <th></th>
+                <th>
+                  <input class="table__input" type="number" name="total['total']" data-total="total" readonly>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
         </div>
-    </div>
-</div>
+      </div>
+    </form>
+  </div>
+  <script defer src="/js/libs.js"></script>
+  <script defer src="/js/script.js"></script>
+  <!-- Для изменений после верстки-->
+  <script defer src="/js/custom.js"></script>
 </body>
-</html>

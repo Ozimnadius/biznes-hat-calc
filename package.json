@@ -10,10 +10,7 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
-    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
-    "smart-grid": "^2.1.2",
-    "swiper": "^7.0.5"
+    "smart-grid": "^2.1.2"
   }
 }

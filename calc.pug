@@ -1,0 +1,184 @@
+form(action="#"
+    method="post"
+    data-calc="calc").calc
+    .container.calc__container
+        h2.calc__title Калькулятор на сайт СПК
+        .calc__tables
+            table.calc__table.table
+                thead
+                    th Параметры здания
+                    th Ед.изм
+                tbody
+                    tr
+                        td Ширина здания
+                        td
+                            input(type="number"
+                                data-calc="field"
+                                data-square="item"
+                                name="width"
+                                value="25").table__input
+                    tr
+                        td Длина здания
+                        td
+                            input(type="number"
+                                data-calc="field"
+                                data-square="item"
+                                name="length"
+                                value="40").table__input
+                    tr
+                        td Кол-во этажей
+                        td
+                            select(name="floors"
+                                data-calc="field"
+                                data-square="item").table__select
+                                option(value="1") 1
+                                option(value="2") 2
+                                option(value="3" selected) 3
+                    tr
+                        td  Высота потолка
+                        td
+                            select(name="ceilingHeight"
+                                data-calc="field"
+                                data-ceilingHeight).table__select
+                                option(value="2.5") 2.5
+                                option(value="3") 3
+                                option(value="3.5" selected) 3.5
+                    tr
+                        td Площадь
+                        td
+                            input(type="number"
+                                name="square"
+                                data-square="total"
+                                readonly=true).table__input
+
+            table.calc__table.table
+                thead
+                    tr
+                        th Наименование
+                        th Переменная
+                        th Цена руб/м²
+                        th Сумма руб с НДС - 20%
+                tbody
+                    tr
+                        td Тип конструкции
+                        td
+                            input(type="text" data-type="name" name="type['name']" readonly=true).table__input
+                        td
+                            input(type="number" data-type="price" name="type['price']" readonly=true).table__input
+                        td
+                            input(type="number"
+                                data-type="total"
+                                name="type['total']"
+                                readonly=true).table__input
+                    tr
+                        td Электрика, светильники, автомат
+                        td
+                            select(name="electric['value']"
+                            data-calc="field"
+                            data-electric="select").table__select
+                                option(value="1450" selected=true) Да
+                                option(value="0") Нет
+                        td
+                            input(type="number"
+                                name="electric['price']"
+                                data-electric="price"
+                                readonly=true).table__input
+                        td
+                            input(type="number"
+                                name="electric['total']"
+                                data-electric="total"
+                                readonly=true).table__input
+                    tr
+                        td Водоснабжение и водоотведение (кол-во точек подключения)
+                        td
+                            input(type="number"
+                                name="water['value']"
+                                data-calc="field"
+                                data-water="value"
+                                value="10").table__input
+                        td
+                            input(type="number"
+                                name="water['price']"
+                                data-water="price"
+                                readonly=true).table__input
+                        td
+                            input(type="number"
+                                name="water['total']"
+                                data-water="total"
+                                readonly=true).table__input
+                    tr
+                        td Отопление
+                        td
+                            select(name="heating['value']"
+                                data-calc="field"
+                                data-heating="select").table__select
+                                option(value="1350" selected=true) Водяное отопление
+                                option(value="450") Отопление электрическими конвекторами
+                                option(value="0") Без отопления
+                        td
+                            input(type="number"
+                                name="heating['price']"
+                                data-heating="price"
+                                readonly=true).table__input
+                        td
+                            input(type="number"
+                                name="heating['total']"
+                                data-heating="total"
+                                readonly=true).table__input
+                    tr
+                        td Монтаж здания (Москва и МО)
+                        td
+                            select(name="building['value']"
+                                data-calc="field"
+                                data-building="select").table__select
+                                option(value="15000" selected=true) Да
+                                option(value="0") Нет
+                        td
+                            input(type="number"
+                                name="building['price']"
+                                data-building="price"
+                                readonly=true).table__input
+                        td
+                            input(type="number"
+                                name="building['total']"
+                                data-building="total"
+                                readonly=true).table__input
+                    tr
+                        td Доставка комплекта здания (Москва и МО)
+                        td
+                            select(name="delivery['value']"
+                                data-calc="field"
+                                data-delivery="select").table__select
+                                option(value="1600" selected=true) Да
+                                option(value="0") Нет
+                        td
+                            input(type="number"
+                                name="delivery['price']"
+                                data-delivery="price"
+                                readonly=true).table__input
+                        td
+                            input(type="number"
+                                name="delivery['total']"
+                                data-delivery="total"
+                                readonly=true).table__input
+                tfoot
+                    tr
+                        th Итого базовая стоимость комплекта здания
+                        th
+                            input(type="number"
+                                name="total['price']"
+                                data-total="price"
+                                readonly=true).table__input
+                        th
+                        th
+                            input(type="number"
+                                name="total['total']"
+                                data-total="total"
+                                readonly=true).table__input
+
+
+
+
+
+
+
