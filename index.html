@@ -86,77 +86,77 @@
                   <input class="table__input" type="number" data-type="total" name="type['total']" readonly>
                 </td>
               </tr>
-              <tr>
+              <tr data-sum="electric">
                 <td>Электрика, светильники, автомат</td>
                 <td>
-                  <select class="table__select" name="electric['value']" data-calc="field" data-electric="select">
+                  <select class="table__select" name="electric['value']" data-calc="field" data-sum="select">
                     <option value="1450" selected>Да</option>
                     <option value="0">Нет</option>
                   </select>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="electric['price']" data-electric="price" readonly>
+                  <input class="table__input" type="number" name="electric['price']" data-sum="price" readonly>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="electric['total']" data-electric="total" readonly>
+                  <input class="table__input" type="number" name="electric['total']" data-sum="total" readonly>
                 </td>
               </tr>
-              <tr>
+              <tr data-sum="water">
                 <td>Водоснабжение и водоотведение (кол-во точек подключения)</td>
                 <td>
-                  <input class="table__input" type="number" name="water['value']" data-calc="field" data-water="value" value="10">
+                  <input class="table__input" type="number" name="water['value']" data-calc="field" data-sum="value" value="10">
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="water['price']" data-water="price" readonly>
+                  <input class="table__input" type="number" name="water['price']" data-sum="price" readonly>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="water['total']" data-water="total" readonly>
+                  <input class="table__input" type="number" name="water['total']" data-sum="total" readonly>
                 </td>
               </tr>
-              <tr>
+              <tr data-sum="heating">
                 <td>Отопление</td>
                 <td>
-                  <select class="table__select" name="heating['value']" data-calc="field" data-heating="select">
+                  <select class="table__select" name="heating['value']" data-calc="field" data-sum="select">
                     <option value="1350" selected>Водяное отопление</option>
                     <option value="450">Отопление электрическими конвекторами</option>
                     <option value="0">Без отопления</option>
                   </select>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="heating['price']" data-heating="price" readonly>
+                  <input class="table__input" type="number" name="heating['price']" data-sum="price" readonly>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="heating['total']" data-heating="total" readonly>
+                  <input class="table__input" type="number" name="heating['total']" data-sum="total" readonly>
                 </td>
               </tr>
-              <tr>
+              <tr data-sum="building">
                 <td>Монтаж здания (Москва и МО)</td>
                 <td>
-                  <select class="table__select" name="building['value']" data-calc="field" data-building="select">
+                  <select class="table__select" name="building['value']" data-calc="field" data-sum="select">
                     <option value="15000" selected>Да</option>
                     <option value="0">Нет</option>
                   </select>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="building['price']" data-building="price" readonly>
+                  <input class="table__input" type="number" name="building['price']" data-sum="price" readonly>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="building['total']" data-building="total" readonly>
+                  <input class="table__input" type="number" name="building['total']" data-sum="total" readonly>
                 </td>
               </tr>
-              <tr>
+              <tr data-sum="delivery">
                 <td>Доставка комплекта здания (Москва и МО)</td>
                 <td>
-                  <select class="table__select" name="delivery['value']" data-calc="field" data-delivery="select">
+                  <select class="table__select" name="delivery['value']" data-calc="field" data-sum="select">
                     <option value="1600" selected>Да</option>
                     <option value="0">Нет</option>
                   </select>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="delivery['price']" data-delivery="price" readonly>
+                  <input class="table__input" type="number" name="delivery['price']" data-sum="price" readonly>
                 </td>
                 <td>
-                  <input class="table__input" type="number" name="delivery['total']" data-delivery="total" readonly>
+                  <input class="table__input" type="number" name="delivery['total']" data-sum="total" readonly>
                 </td>
               </tr>
             </tbody>

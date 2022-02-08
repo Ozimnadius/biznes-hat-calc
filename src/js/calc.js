@@ -2,11 +2,7 @@
 // @prepros-append modules/square.js
 // @prepros-append modules/sum.js
 // @prepros-append modules/typeConstruction.js
-// @prepros-append modules/electric.js
 // @prepros-append modules/water.js
-// @prepros-append modules/heating.js
-// @prepros-append modules/building.js
-// @prepros-append modules/delivery.js
 // @prepros-append modules/total.js
 
 window.addEventListener("load", function () {
@@ -28,11 +24,11 @@ class Calc {
         this.square = new Square();
         this.ratio = new Ratio();
         this.typeConstruction = new TypeConstruction(this);
-        this.electric = new Electric(this);
-        this.water = new Water(this);
-        this.heating = new Heating(this);
-        this.building = new Building(this);
-        this.delivery = new Delivery(this);
+        this.electric = new Sum('[data-sum="electric"]',this);
+        this.water = new Water('[data-sum="water"]',this);
+        this.heating = new Sum('[data-sum="heating"]',this);
+        this.building = new Sum('[data-sum="building"]',this);
+        this.delivery = new Sum('[data-sum="delivery"]',this);
         this.total = new Total(this);
 
         this.#init();

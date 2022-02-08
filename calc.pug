@@ -70,96 +70,96 @@ form(action="#"
                                 data-type="total"
                                 name="type['total']"
                                 readonly=true).table__input
-                    tr
+                    tr(data-sum="electric")
                         td Электрика, светильники, автомат
                         td
                             select(name="electric['value']"
                             data-calc="field"
-                            data-electric="select").table__select
+                            data-sum="select").table__select
                                 option(value="1450" selected=true) Да
                                 option(value="0") Нет
                         td
                             input(type="number"
                                 name="electric['price']"
-                                data-electric="price"
+                                data-sum="price"
                                 readonly=true).table__input
                         td
                             input(type="number"
                                 name="electric['total']"
-                                data-electric="total"
+                                data-sum="total"
                                 readonly=true).table__input
-                    tr
+                    tr(data-sum="water")
                         td Водоснабжение и водоотведение (кол-во точек подключения)
                         td
                             input(type="number"
                                 name="water['value']"
                                 data-calc="field"
-                                data-water="value"
+                                data-sum="value"
                                 value="10").table__input
                         td
                             input(type="number"
                                 name="water['price']"
-                                data-water="price"
+                                data-sum="price"
                                 readonly=true).table__input
                         td
                             input(type="number"
                                 name="water['total']"
-                                data-water="total"
+                                data-sum="total"
                                 readonly=true).table__input
-                    tr
+                    tr(data-sum="heating")
                         td Отопление
                         td
                             select(name="heating['value']"
                                 data-calc="field"
-                                data-heating="select").table__select
+                                data-sum="select").table__select
                                 option(value="1350" selected=true) Водяное отопление
                                 option(value="450") Отопление электрическими конвекторами
                                 option(value="0") Без отопления
                         td
                             input(type="number"
                                 name="heating['price']"
-                                data-heating="price"
+                                data-sum="price"
                                 readonly=true).table__input
                         td
                             input(type="number"
                                 name="heating['total']"
-                                data-heating="total"
+                                data-sum="total"
                                 readonly=true).table__input
-                    tr
+                    tr(data-sum="building")
                         td Монтаж здания (Москва и МО)
                         td
                             select(name="building['value']"
                                 data-calc="field"
-                                data-building="select").table__select
+                                data-sum="select").table__select
                                 option(value="15000" selected=true) Да
                                 option(value="0") Нет
                         td
                             input(type="number"
                                 name="building['price']"
-                                data-building="price"
+                                data-sum="price"
                                 readonly=true).table__input
                         td
                             input(type="number"
                                 name="building['total']"
-                                data-building="total"
+                                data-sum="total"
                                 readonly=true).table__input
-                    tr
+                    tr(data-sum="delivery")
                         td Доставка комплекта здания (Москва и МО)
                         td
                             select(name="delivery['value']"
                                 data-calc="field"
-                                data-delivery="select").table__select
+                                data-sum="select").table__select
                                 option(value="1600" selected=true) Да
                                 option(value="0") Нет
                         td
                             input(type="number"
                                 name="delivery['price']"
-                                data-delivery="price"
+                                data-sum="price"
                                 readonly=true).table__input
                         td
                             input(type="number"
                                 name="delivery['total']"
-                                data-delivery="total"
+                                data-sum="total"
                                 readonly=true).table__input
                 tfoot
                     tr

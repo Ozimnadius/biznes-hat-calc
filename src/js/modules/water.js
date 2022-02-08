@@ -1,19 +1,7 @@
-class Water {
-    constructor(calc, options) {
-        let def = {
-            valueSelector: '[data-water="value"]',
-            priceSelector: '[data-water="price"]',
-            totalSelector: '[data-water="total"]',
-        }
-
-        Object.assign(this, def, options);
-
-        this.calc = calc;
-        this.valueElem = document.querySelector(this.valueSelector);
-        this.priceElem = document.querySelector(this.priceSelector);
-        this.totalElem = document.querySelector(this.totalSelector);
-
-        this.total = 0;
+class Water extends Sum{
+    constructor(selector,calc) {
+        super(selector,calc);
+        this.valueElem = this.sum.querySelector('[data-sum="value"]');
     }
 
     update() {
