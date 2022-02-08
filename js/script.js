@@ -28,7 +28,7 @@ class Calc {
         this.ratio = new Ratio();
         this.typeConstruction = new TypeConstruction(this);
         this.electric = new Sum('[data-sum="electric"]',this);
-        this.water = new Water('[data-sum="water"]',this);
+        this.water = new SumWater('[data-sum="water"]',this);
         this.heating = new Sum('[data-sum="heating"]',this);
         this.building = new Sum('[data-sum="building"]',this);
         this.delivery = new Sum('[data-sum="delivery"]',this);
@@ -229,7 +229,7 @@ class TypeConstruction {
 
 
 }
-class Water extends Sum{
+class SumWater extends Sum{
     constructor(selector,calc) {
         super(selector,calc);
         this.valueElem = this.sum.querySelector('[data-sum="value"]');

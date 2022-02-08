@@ -1,4 +1,4 @@
-class Water extends Sum{
+class SumWater extends Sum{
     constructor(selector,calc) {
         super(selector,calc);
         this.valueElem = this.sum.querySelector('[data-sum="value"]');
