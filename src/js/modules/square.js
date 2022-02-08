@@ -11,13 +11,13 @@ class Square {
 
     }
 
-    get square() {
+    get value() {
         return Array.from(this.itemsElem).reduce((sum, i) => {
             return sum * Number(i.value)
         }, 1)
     }
 
     update() {
-        this.squareElem.value = this.square;
+        this.squareElem.value = this.value;
     }
 }

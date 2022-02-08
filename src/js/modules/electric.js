@@ -18,7 +18,7 @@ class Electric {
 
     update() {
         this.priceElem.value = this.selectElem.value;
-        this.total = Math.round(this.priceElem.value * this.calc.square.square);
+        this.total = Math.round(this.priceElem.value * this.calc.square.value);
         this.totalElem.value = this.total;
     }
 }

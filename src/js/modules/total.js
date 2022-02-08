@@ -20,7 +20,7 @@ class Total {
             this.calc.heating.total+
             this.calc.building.total+
             this.calc.delivery.total;
-        this.priceElem.value = Math.round(this.totalElem.value/this.calc.square.square);
+        this.priceElem.value = Math.round(this.totalElem.value/this.calc.square.value);
 
     }
 }

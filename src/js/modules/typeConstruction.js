@@ -98,14 +98,14 @@ class TypeConstruction {
     }
 
     get data() {
-        let result = Object.keys(this.dataSquares).reverse().find((i) => this.calc.square.square > Number(i));
+        let result = Object.keys(this.dataSquares).reverse().find((i) => this.calc.square.value > Number(i));
         return this.dataSquares[result].floor[this.calc.floor];
     }
 
     update() {
         this.nameElem.value = this.data.name;
         this.priceElem.value = Math.round(this.data.price * this.calc.ratio.value);
-        this.total = Math.round(this.priceElem.value * this.calc.square.square);
+        this.total = Math.round(this.priceElem.value * this.calc.square.value);
         this.totalElem.value = this.total;
     }
 
