@@ -18,6 +18,11 @@ class Calc {
         let def = {
             calcSelector: '[data-calc="calc"]',
             fieldSelector: '[data-calc="field"]',
+            electricSelector: '[data-sum="electric"]',
+            waterSelector: '[data-sum="water"]',
+            heatingSelector: '[data-sum="heating"]',
+            buildingSelector: '[data-sum="building"]',
+            deliverySelector: '[data-sum="delivery"]',
         }
         Object.assign(this, def, options);
 
@@ -27,11 +32,11 @@ class Calc {
         this.square = new Square();
         this.ratio = new Ratio();
         this.typeConstruction = new TypeConstruction(this);
-        this.electric = new Sum('[data-sum="electric"]',this);
-        this.water = new SumWater('[data-sum="water"]',this);
-        this.heating = new Sum('[data-sum="heating"]',this);
-        this.building = new Sum('[data-sum="building"]',this);
-        this.delivery = new Sum('[data-sum="delivery"]',this);
+        this.electric = new Sum(this.electricSelector,this);
+        this.water = new SumWater(this.waterSelector,this);
+        this.heating = new Sum(this.heatingSelector,this);
+        this.building = new Sum(this.buildingSelector,this);
+        this.delivery = new Sum(this.deliverySelector,this);
         this.total = new Total(this);
 
         this.#init();
