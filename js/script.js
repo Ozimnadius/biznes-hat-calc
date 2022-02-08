@@ -99,6 +99,38 @@ class Square {
         this.squareElem.value = this.value;
     }
 }
+class Sum {
+    constructor(calc, options) {
+        let def = {
+            selectSelector: '[data-sum="select"]',
+            priceSelector: '[data-sum="price"]',
+            totalSelector: '[data-sum="total"]',
+        }
+
+        Object.assign(this, def, options);
+
+        this.calc = calc;
+        this.total = 0;
+    }
+
+    get selectElem(){
+       return  document.querySelector(this.selectSelector);
+    }
+
+    get priceElem(){
+        return document.querySelector(this.priceSelector);
+    }
+
+     get totalElem(){
+        return document.querySelector(this.totalSelector);
+     }
+
+    update() {
+        this.priceElem.value = this.selectElem.value;
+        this.total = Math.round(this.priceElem.value * this.calc.square.value);
+        this.totalElem.value = this.total;
+    }
+}
 class TypeConstruction {
     constructor(calc,options) {
         let def = {
@@ -212,8 +244,9 @@ class TypeConstruction {
 
 
 }
-class Electric {
+class Electric extends Sum {
     constructor(calc, options) {
+        super(calc, options);
         let def = {
             selectSelector: '[data-electric="select"]',
             priceSelector: '[data-electric="price"]',
@@ -221,19 +254,6 @@ class Electric {
         }
 
         Object.assign(this, def, options);
-
-        this.calc = calc;
-        this.selectElem = document.querySelector(this.selectSelector);
-        this.priceElem = document.querySelector(this.priceSelector);
-        this.totalElem = document.querySelector(this.totalSelector);
-
-        this.total = 0;
-    }
-
-    update() {
-        this.priceElem.value = this.selectElem.value;
-        this.total = Math.round(this.priceElem.value * this.calc.square.value);
-        this.totalElem.value = this.total;
     }
 }
 class Water {
@@ -260,32 +280,21 @@ class Water {
         this.priceElem.value = Math.round(this.totalElem.value/this.calc.square.value);
     }
 }
-class Heating {
+class Heating extends Sum{
     constructor(calc, options) {
+        super(calc, options);
         let def = {
             selectSelector: '[data-heating="select"]',
             priceSelector: '[data-heating="price"]',
             totalSelector: '[data-heating="total"]',
         }
-
         Object.assign(this, def, options);
-
-        this.calc = calc;
-        this.selectElem = document.querySelector(this.selectSelector);
-        this.priceElem = document.querySelector(this.priceSelector);
-        this.totalElem = document.querySelector(this.totalSelector);
-
-        this.total = 0;
     }
 
-    update() {
-        this.priceElem.value = this.selectElem.value;
-        this.total = Math.round(this.priceElem.value * this.calc.square.value);
-        this.totalElem.value = this.total;
-    }
 }
-class Building {
+class Building extends Sum{
     constructor(calc, options) {
+        super(calc, options);
         let def = {
             selectSelector: '[data-building="select"]',
             priceSelector: '[data-building="price"]',
@@ -293,43 +302,17 @@ class Building {
         }
 
         Object.assign(this, def, options);
-
-        this.calc = calc;
-        this.selectElem = document.querySelector(this.selectSelector);
-        this.priceElem = document.querySelector(this.priceSelector);
-        this.totalElem = document.querySelector(this.totalSelector);
-
-        this.total = 0;
-    }
-
-    update() {
-        this.priceElem.value = this.selectElem.value;
-        this.total = Math.round(this.priceElem.value * this.calc.square.value);
-        this.totalElem.value = this.total;
     }
 }
-class Delivery {
+class Delivery extends Sum{
     constructor(calc, options) {
+        super(calc, options);
         let def = {
             selectSelector: '[data-delivery="select"]',
             priceSelector: '[data-delivery="price"]',
             totalSelector: '[data-delivery="total"]',
         }
-
         Object.assign(this, def, options);
-
-        this.calc = calc;
-        this.selectElem = document.querySelector(this.selectSelector);
-        this.priceElem = document.querySelector(this.priceSelector);
-        this.totalElem = document.querySelector(this.totalSelector);
-
-        this.total = 0;
-    }
-
-    update() {
-        this.priceElem.value = this.selectElem.value;
-        this.total = Math.round(this.priceElem.value * this.calc.square.value);
-        this.totalElem.value = this.total;
     }
 }
 class Total {

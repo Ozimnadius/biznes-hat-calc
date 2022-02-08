@@ -1,5 +1,6 @@
 // @prepros-append modules/ratio.js
 // @prepros-append modules/square.js
+// @prepros-append modules/sum.js
 // @prepros-append modules/typeConstruction.js
 // @prepros-append modules/electric.js
 // @prepros-append modules/water.js
